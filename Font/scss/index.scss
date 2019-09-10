@@ -32,7 +32,12 @@ li {
                 padding: 20px;
                 color: #333;
                 font-size: 18px;
+                transition: all .8s;
                 box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+
+                &:hover {
+                    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .5);
+                }
 
                 &.patrick-hand {
                     font-family: 'patrick hand';
@@ -53,18 +58,18 @@ li {
         }
     }
 
-    pre[rel] {
-        margin-top: 20px;
-        padding-top: 0px !important;
-        font-size: 14px;
-    }
+    // pre[rel] {
+    //     margin-top: 20px;
+    //     padding-top: 0px !important;
+    //     font-size: 14px;
+    // }
 
-    code[class*="language-"],
-    pre[class*="language-"] {
-        height: 80px;
-        display: flex;
-        align-items: center;
-        padding: 0 0 0 10px;
-        border-radius: 0;
-    }
+    // code[class*="language-"],
+    // pre[class*="language-"] {
+    //     min-height: 80px;
+    //     display: flex;
+    //     align-items: center;
+    //     padding: 0 0 0 10px;
+    //     border-radius: 0;
+    // }
 }

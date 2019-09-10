@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数异常</title>
+    <link rel="stylesheet" href="./scss/index.min.css" />
+    <link rel="stylesheet" href="../../Plugins/prism/prism.css" />
+</head>
+
+<body>
+
+    <div class="ys-cont">
+        <div class="ys-head">
+            <a>YISHI FUNCTION</a>
+        </div>
+        <div class="ys-main">
+            <div class="ys-post">
+                <h3>2019-09-10</h3>
+                <h2>Function Exceptions 函数异常</h2>
+            </div>
+            <div class="ys-main-cont">
+                <div class="ys-mod">
+                    <h2 class="ys-quote">形式及定义</h2>
+                    <p class="ys-desc">
+                        JS 提供了一套异常处理机制。异常是干扰程序的正常流程的不寻常的<span class="ys-bgl">事故</span>。<br/>
+                        throw 语句中断函数的执行。它应该抛出一个 exception 对象。该<span class="ys-bgl">对象</span>包含一个用来识别异常类型的 name 属性和一个描述性的 message 属性。你也可以添加其他的属性。
+                    </p>
+                    <pre rel="js">
+                        <code class="language-js">
+    // 当参数不是数字类型时, 抛出异常
+
+    var add = function (a) {
+        if (typeof a !== 'number') {
+            throw {
+                name: 'TypeError',
+                message: 'add needs numbers'
+            }
+        }
+    };
+
+
+    // 处理抛出的异常
+
+    var try_it = function () {
+        try {
+            add('ss');
+        } catch (e) {
+
+        }
+    };
+
+    try_it();
+                        </code>
+                    </pre>
+                </div>
+            </div>
+            <div class="ys-main-cont">
+                <div class="ys-mod">
+                    <h2 class="ys-quote">用途</h2>
+                    <p class="ys-desc">
+                        处理转换 JSON
+                    </p>
+                    <pre rel="js">
+                        <code class="language-js">
+    // 转换 json
+    
+    var json = function () {
+        var obj;
+
+        try {
+            JSON.parse(obj);
+        } catch (e) {
+            obj = {};
+        }
+
+        return obj;
+    }
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../Plugins/prism/prism.js"></script>
+</body>
+
+</html>

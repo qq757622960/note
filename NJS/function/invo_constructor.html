@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数 构造器调用</title>
+    <link rel="stylesheet" href="../../Plugins/prism/prism.css" />
+    <link rel="stylesheet" href="./scss/index.min.css" />
+</head>
+
+<body>
+
+    <div class="ys-cont">
+        <div class="ys-head">
+            <a>YISHI FUNCTION</a>
+        </div>
+        <div class="ys-main">
+            <div class="ys-post">
+                <h3>2019-09-10</h3>
+                <h2>The Constructor invocation Pattern 构造器调用模式</h2>
+                <p class="ys-desc">
+                </p>
+            </div>
+            <div class="ys-main-cont">
+                <div class="ys-mod">
+                    <h2 class="ys-quote">构造器调用模式：形式及定义</h2>
+                    <p class="ys-desc">
+                        构造器调用模式: 如果在一个函数前面带上 <span class="ys-bgl">new</span> 来调用，那么就是构造器调用
+                        <span class="ys-bgl">this</span> 绑定到该对象
+                    </p>
+                    <pre rel="JS">
+                        <code class="language-js">
+    // 创建一个名为 Quo 的构造器函数。它构造一个带有 status 属性的对象
+
+    var Quo = function (string) {
+        this.status = string;
+    };
+
+    // 给 Quo 的所有实例提供一个名为 get_status 的公共方法
+
+    Quo.prototype.getStatus = function () {
+        return this.status;
+    };
+
+    // 构造一个 Quo 实例
+
+    var myQuo = new Quo('open');
+
+                        </code>
+                    </pre>
+                </div>
+                <div class="ys-mod">
+                    <h2 class="ys-quote">好处</h2>
+                    <p class="ys-desc">
+                        暂无
+                    </p>
+                </div>
+                <div class="ys-mod">
+                    <h2 class="ys-quote">用途</h2>
+                    <p class="ys-desc">
+                        定义构造函数
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../../Plugins/prism/prism.js"></script>
+</body>
+
+</html>

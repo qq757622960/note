@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数参数</title>
+    <link rel="stylesheet" href="./scss/index.min.css" />
+    <link rel="stylesheet" href="../../Plugins/prism/prism.css" />
+</head>
+
+<body>
+
+    <div class="ys-cont">
+        <div class="ys-head">
+            <a>YISHI FUNCTION</a>
+        </div>
+        <div class="ys-main">
+            <div class="ys-post">
+                <h3>2019-09-10</h3>
+                <h2>Function Arguments 函数参数</h2>
+            </div>
+            <div class="ys-main-cont">
+                <div class="ys-mod">
+                    <h2 class="ys-quote">形式及定义</h2>
+                    <p class="ys-desc">
+                        当函数被定义时，会得到一个 <span class="ys-bgl">"免费"</span> 配送的参数，那就是 arguments 数组。它是一个 <span class="ys-bgl">类似数组(array-like)</span>
+                    </p>
+                </div>
+                <div class="ys-mod">
+                    <h2 class="ys-quote">用途</h2>
+                    <p class="ys-desc">
+                        构造一个大量数字相加的函数
+                    </p>
+                    <pre rel="JS">
+                        <code class="language-js">
+    // 构造一个将大量的值相加的函数
+
+    var sum = function () {
+        var i, sum = 0;
+
+        for (i = 0; i < arguments.length; i++) {
+            sum += arguments[i];
+        }
+
+        return sum;
+    }
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../Plugins/prism/prism.js"></script>
+</body>
+
+</html>

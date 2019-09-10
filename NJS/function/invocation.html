@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数调用</title>
+    <link rel="stylesheet" href="../../Plugins/prism/prism.css" />
+    <link rel="stylesheet" href="./scss/index.min.css" />
+</head>
+
+<body>
+
+    <div class="ys-cont">
+        <div class="ys-head">
+            <a>YISHI FUNCTION</a>
+        </div>
+        <div class="ys-main">
+            <div class="ys-post">
+                <h3>2019-09-10</h3>
+                <h2>Function Invocation 函数调用</h2>
+                <p class="ys-desc">
+                    JS 一共有 4 种调用模式：<a href="./invo_object.html">方法调用模式</a>、<a href="./invo_function.html">函数调用模式</a>、<a href="./invo_constructor.html">构造器调用模式</a>、<a href="">apply 调用模式</a>。 <br/>
+                    这些模式在<span class="ys-bgl">this</span>上存在差异。 <br/>
+                    每个函数在调用时，还会接收<span class="ys-bgl">两个</span>附加参数：this 和 arguments。 <br/>
+                    调用运算符 '()', 是跟在任何产生一个<span class="ys-bgl">函数值</span>的表达式之后的一对圆括号。
+                </p>
+            </div>
+            <!-- <div class="ys-main-cont">
+                <div class="ys-mod">
+                    <h2 class="ys-quote">方法调用：形式及定义</h2>
+                    <p class="ys-desc">
+                       方法调用模式: 当一个函数被保存为<span class="ys-bgl">对象</span>的一个属性时, 我们称之为方法。
+                    </p>
+                    <pre rel="JS">
+                        <code class="language-js">
+    var obj = {
+        func: function () {}                                
+    };
+                        </code>
+                    </pre>
+                </div>
+                <div class="ys-mod">
+                    <h2 class="ys-quote">好处</h2>
+                    <p class="ys-desc">
+                        可以把函数集中化，比如事件调用
+                    </p>
+                </div>
+                <div class="ys-mod">
+                    <h2 class="ys-quote">用途</h2>
+                    <p class="ys-desc">
+                        事件绑定
+                    </p>
+                    <pre rel="JS">
+                        <code class="language-js">
+    $('body').on('click', '*[ys-event]', function (e) {
+        var othis = $(this), methid = othis.attr('ys-event');
+        events[methid] ? events[methid].apply(this, [othis, e]) : '';
+    });
+
+    // 事件表里面存放动作
+
+    var events = {
+        detail: function (othis, e) {
+            console.log('详情');
+        }
+    };                   
+                        </code>
+                    </pre>
+                </div>
+            </div>
+            <div class="ys-main-cont">
+                <div class="ys-mod">
+                    <h2 class="ys-quote">函数调用模式：形式及定义</h2>
+                    <p class="ys-desc">
+                        函数调用模式: 当一个函数<span class="ys-bgl">不是</span>一个对象的属性时，那么它就是被当做一个函数来调用的
+                    </p>
+                </div>
+                <div class="ys-mod">
+                    <h2 class="ys-quote">好处</h2>
+                    <p class="ys-desc">
+                        可以把函数集中化，比如事件调用
+                    </p>
+                </div>
+                <div class="ys-mod">
+                    <h2 class="ys-quote">用途</h2>
+                    <p class="ys-desc">
+                        事件绑定
+                    </p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- <pre rel="CSS">
+        <code class="language-css">
+        line-height: 20px;
+        </code>
+    </pre> -->
+    <script src="../../Plugins/prism/prism.js"></script>
+</body>
+
+</html>

@@ -22,8 +22,8 @@ pre[rel]:before {
     top: .33rem;
     right: .52rem;
     width: 100%;
-	padding: 0;
-	text-align: right;
+    padding: 0;
+    text-align: right;
 }
 
 pre[rel=CSS]::before,
@@ -160,4 +160,19 @@ pre[class*="language-"] {
 
 .token.entity {
     cursor: help;
+}
+
+pre[rel] {
+    margin-top: 20px;
+    /* padding-top: 0px !important; */
+    font-size: 14px;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+    min-height: 80px;
+    /* display: flex; */
+    /* align-items: center; */
+    padding: 0 0 0 10px;
+    border-radius: 0;
 }

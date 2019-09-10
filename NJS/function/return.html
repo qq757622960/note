@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数返回值</title>
+    <link rel="stylesheet" href="./scss/index.min.css" />
+    <link rel="stylesheet" href="../../Plugins/prism/prism.css" />
+</head>
+
+<body>
+
+    <div class="ys-cont">
+        <div class="ys-head">
+            <a>YISHI FUNCTION</a>
+        </div>
+        <div class="ys-main">
+            <div class="ys-post">
+                <h3>2019-09-10</h3>
+                <h2>Function Return 函数返回值</h2>
+            </div>
+            <div class="ys-main-cont">
+                <div class="ys-mod">
+                    <h2 class="ys-quote">形式及定义</h2>
+                    <p class="ys-desc">
+                        一个函数<span class="ys-bgl">总会有一个</span>返回值。如果没有指定返回值，则返回 undefined。如果函数调用时在前面加上了 new 前缀，<span class="ys-bgl">且</span>返回值不是一个对象，则返回 this (该新对象)。
+                    </p>
+                    <pre rel="js">
+                        <code class="language-js">
+    // 返回 undefined
+    
+    var func = function () {
+        console.log(123);
+    };
+
+
+    // 返回 this
+
+    var Person = function () {
+        this.name = 'xfj';
+    };
+    var person = new Person();
+    
+
+    // 返回 return 的对象
+
+    var Person = function () {
+        this.name = 'xfj';
+
+        return {
+            name: 'mmx'
+        }
+    };
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../Plugins/prism/prism.js"></script>
+</body>
+
+</html>

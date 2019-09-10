@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数 Apply 调用模式</title>
+    <link rel="stylesheet" href="../../Plugins/prism/prism.css" />
+    <link rel="stylesheet" href="./scss/index.min.css" />
+</head>
+
+<body>
+
+    <div class="ys-cont">
+        <div class="ys-head">
+            <a>YISHI FUNCTION</a>
+        </div>
+        <div class="ys-main">
+            <div class="ys-post">
+                <h3>2019-09-10</h3>
+                <h2>The Apply invocation Pattern 构造器调用模式</h2>
+            </div>
+            <div class="ys-main-cont">
+                <div class="ys-mod">
+                    <h2 class="ys-quote">Apply调用模式：形式及定义</h2>
+                    <p class="ys-desc">
+                        apply 方法让我们构建一个参数数组传递给调用函数。它允许我们选择 this 的值。apply 接收 <span class="ys-bgl">两个参数</span>, 第一个是要绑定给 this 的值，第二个就是一个参数数组。
+                    </p>
+                    <pre rel="JS">
+                        <code class="language-js">
+    func.apply(context, [arrayArguments]);
+                        </code>
+                    </pre>
+                </div>
+                <div class="ys-mod">
+                    <h2 class="ys-quote">好处</h2>
+                    <p class="ys-desc">
+                        暂无
+                    </p>
+                </div>
+                <div class="ys-mod">
+                    <h2 class="ys-quote">用途</h2>
+                    <p class="ys-desc">改变 this 指向</p>
+                    <pre rel="JS">
+                        <code class="language-js">
+    var obj1 = {
+        name: 'mmx'
+    };
+
+    var obj2 = {
+        name: 'xfj'
+    };
+
+    window.name = 'yy';
+
+    var getName = function () {
+        console.log(this.name);
+    };
+
+    // 输出 yy
+    getName();  
+
+    // 输出 mmx
+    getName.apply(obj1);
+
+    // 输出 xfj
+    getName.apply(obj2);
+                        </code>
+                    </pre>
+                    <p class="ys-desc">借用其他对象的方法</p>
+                    <pre rel="JS">
+                        <code class="language-js">
+    Math.max.apply(null, [1, 5, 6]);
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../../Plugins/prism/prism.js"></script>
+</body>
+
+</html>

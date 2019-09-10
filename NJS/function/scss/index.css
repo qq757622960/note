@@ -1,1 +1,33 @@
 * { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+*::-moz-selection { background: #9c27b0; color: #fff; }
+
+*::selection { background: #9c27b0; color: #fff; }
+
+ul, li { list-style: none; }
+
+a { color: #333; text-decoration: none; }
+
+.ys-cont .ys-head { margin: 50px auto 0; text-align: center; }
+.ys-cont .ys-head a { font-family: "Montserrat"; font-weight: 200; color: #222; letter-spacing: 5px; }
+.ys-cont .ys-main { margin: 60px auto 0; max-width: 650px; }
+.ys-cont .ys-main .ys-desc { margin: 30px 0; font-size: 16px; line-height: 2; font-weight: 200; text-align: justify; letter-spacing: 2px; }
+.ys-cont .ys-main .ys-desc a[href] { position: relative; }
+.ys-cont .ys-main .ys-desc a[href]:after { content: ""; position: absolute; z-index: -1; top: 70%; left: -0.1em; right: -0.1em; bottom: 0; -webkit-transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1); transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1); background-color: rgba(255, 51, 51, 0.4); }
+.ys-cont .ys-main .ys-desc a[href]:hover:after { top: 0; }
+.ys-cont .ys-main .ys-list .ys-item { position: relative; margin-bottom: 20px; padding: 20px; color: #444444; font-size: 16px; font-weight: 100; border-bottom: 1px solid #e6e6e6; }
+.ys-cont .ys-main .ys-list .ys-item h3 { position: absolute; left: 10px; top: 27px; font-size: 13px; color: #999; font-weight: 100; letter-spacing: 1px; }
+.ys-cont .ys-main .ys-list .ys-item h2 { margin-left: 110px; font-weight: 200; }
+.ys-cont .ys-main .ys-list .ys-item h2 a { font-weight: 200; font-size: 20px; color: #444444; -webkit-transition: color .4s; transition: color .4s; }
+.ys-cont .ys-main .ys-list .ys-item h2 a:hover { color: #f33; }
+.ys-cont .ys-main .ys-post { margin-bottom: 80px; }
+.ys-cont .ys-main .ys-post h2 { font-weight: 200; font-size: 20px; color: #444444; }
+.ys-cont .ys-main .ys-post h3 { margin: 0 0 30px; font-size: 13px; color: #999; font-weight: 100; letter-spacing: 1px; }
+.ys-cont .ys-main .ys-main-cont { padding: 0 15px; }
+.ys-cont .ys-main .ys-main-cont .ys-mod { margin-bottom: 50px; }
+.ys-cont .ys-main .ys-main-cont .ys-mod .ys-desc { margin: 30px 0; }
+
+.ys-bgl { margin: 0 5px; padding: 0 2px; background: -webkit-gradient(linear, left top, right top, from(#fce4ed), to(#ffe8cc)); background: linear-gradient(to right, #fce4ed, #ffe8cc); }
+
+.ys-quote { font-size: 22px; font-weight: 200; color: #444444; position: relative; }
+.ys-quote:before { content: ''; border-left: 5px solid #f66; position: absolute; left: -15px; height: 75%; top: 12%; }

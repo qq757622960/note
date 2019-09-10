@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数调用</title>
+    <link rel="stylesheet" href="../../Plugins/prism/prism.css" />
+    <link rel="stylesheet" href="./scss/index.min.css" />
+</head>
+
+<body>
+
+    <div class="ys-cont">
+        <div class="ys-head">
+            <a>YISHI FUNCTION</a>
+        </div>
+        <div class="ys-main">
+            <div class="ys-post">
+                <h3>2019-09-10</h3>
+                <h2>The Function invocation Pattern 函数调用模式</h2>
+                <p class="ys-desc">
+                </p>
+            </div>
+            <div class="ys-main-cont">
+                <div class="ys-mod">
+                    <h2 class="ys-quote">函数调用模式：形式及定义</h2>
+                    <p class="ys-desc">
+                        函数调用模式: 当一个函数<span class="ys-bgl">不是</span>一个对象的属性时，那么它就是被当做一个函数来调用的。
+                        <span class="ys-bgl">this</span> 绑定到全局对象
+                    </p>
+                    <pre rel="JS">
+                        <code class="language-js">
+    var func = function () {}
+                        </code>
+                    </pre>
+                    <pre rel="JS">
+                        <code class="language-js">
+    obj.double = function () {
+        var that = this;
+
+        var helper = function () {
+            that.value = 123;
+        }
+
+        // 以函数形式调用 helper
+        helper();
+    }
+
+    // 以方法形式调用 double
+    obj.double();
+                        </code>
+                    </pre>
+                </div>
+                <div class="ys-mod">
+                    <h2 class="ys-quote">好处</h2>
+                    <p class="ys-desc">
+                        暂无
+                    </p>
+                </div>
+                <div class="ys-mod">
+                    <h2 class="ys-quote">用途</h2>
+                    <p class="ys-desc">
+                        定义普通的函数
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="../../Plugins/prism/prism.js"></script>
+</body>
+
+</html>
