@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.ys-cont {
+    .ys-head {
+        margin: 50px auto 0;
+        text-align: center;
+
+        a {
+            font-family: "Montserrat";
+            font-weight: 200;
+            color: #444;
+            letter-spacing: 5px;
+        }
+    }
+
+    .ys-main {
+        margin: 60px auto 0;
+        max-width: 650px;
+
+        .ys-list {
+            .ys-item {
+                margin-bottom: 20px;
+                padding: 20px;
+                color: #333;
+                font-size: 18px;
+                box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+
+                &.patrick-hand {
+                    font-family: 'patrick hand';
+                }
+
+                &.Give-You-Glory {
+                    font-family: 'Give You Glory';
+                }
+
+                &.Varela-Round {
+                    font-family: 'Varela Round';
+                }
+
+                &.Nunito {
+                    font-family: 'Nunito';
+                }
+            }
+        }
+    }
+
+    pre[rel] {
+        margin-top: 20px;
+        padding-top: 0px !important;
+        font-size: 14px;
+    }
+
+    code[class*="language-"],
+    pre[class*="language-"] {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        padding: 0 0 0 10px;
+        border-radius: 0;
+    }
+}

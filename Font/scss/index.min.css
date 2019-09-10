@@ -1,0 +1,12 @@
+*{margin:0;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box}
+li,ul{list-style:none}
+.ys-cont .ys-head{margin:50px auto 0;text-align:center}
+.ys-cont .ys-head a{font-family:Montserrat;font-weight:200;color:#444;letter-spacing:5px}
+.ys-cont .ys-main{margin:60px auto 0;max-width:650px}
+.ys-cont .ys-main .ys-list .ys-item{margin-bottom:20px;padding:20px;color:#333;font-size:18px;-webkit-box-shadow:0 2px 12px 0 rgba(0,0,0,.1);box-shadow:0 2px 12px 0 rgba(0,0,0,.1)}
+.ys-cont .ys-main .ys-list .ys-item.patrick-hand{font-family:'patrick hand'}
+.ys-cont .ys-main .ys-list .ys-item.Give-You-Glory{font-family:'Give You Glory'}
+.ys-cont .ys-main .ys-list .ys-item.Varela-Round{font-family:'Varela Round'}
+.ys-cont .ys-main .ys-list .ys-item.Nunito{font-family:Nunito}
+.ys-cont pre[rel]{margin-top:20px;padding-top:0!important;font-size:14px}
+.ys-cont code[class*=language-],.ys-cont pre[class*=language-]{height:80px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:0 0 0 10px;border-radius:0}
