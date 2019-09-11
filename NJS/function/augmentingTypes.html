@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数扩充类型功能</title>
+    <link rel="stylesheet" href="./scss/index.min.css" />
+    <link rel="stylesheet" href="../../Plugins/prism/prism.css" />
+</head>
+
+<body>
+
+    <div class="ys-cont">
+        <div class="ys-head">
+            <a>YISHI FUNCTION</a>
+        </div>
+        <div class="ys-main">
+            <div class="ys-post">
+                <h3>2019-09-10</h3>
+                <h2>Function augmentingTypes 扩充类型功能</h2>
+            </div>
+            <div class="ys-main-cont">
+                <div class="ys-mod">
+                    <h2 class="ys-quote">形式及定义</h2>
+                    <p class="ys-desc">
+                        JS 语言的基本类型扩充功能。通过给 Object.prototype 添加方法，可以让该方法对<span class="ys-bgl">所有对象</span>都可用。这样的方式对函数、数组、字符串、数字、正则表达式和布尔值同样适用。<br /><br />
+                        我们可以通过给 Function.prototype 增加方法来使得该方法对<span class="ys-bgl">所有函数</span>可用。
+                    </p>
+                    <pre rel="js">
+                        <code class="language-js">
+    // 给字符串扩展一个去除左右空格的方法
+
+    String.prototype.trim = function () {
+        return this.replace(/^\s+|\s+$/g, '');
+    };
+
+    // 给 Number 添加一个根据数字的正负来使用 Math.ceil 或 Math.floor 方法
+
+    Number.prototype.integer = function () {  
+        return Math[this < 0 ? 'ceil' : 'floor'](this);
+    };
+
+    // 抽取公共形式
+
+    String.prototype.trim = function () {}
+    Number.prototype.trim = function () {}
+
+    // 因为 String、Number 的父类是 Function, 可以在 String.__proto__ 中体现出来
+    // 所以可以提取一个公共方法, 和使用 apply 或 call 一样
+
+    Function.prototype.method = function (name, func) {
+        if (!this.prototype[name]) {
+            this.prototype[name] = func;
+        }
+
+        return this;
+    };
+                        </code>
+                    </pre>
+                </div>
+            </div>
+            <div class="ys-main-cont">
+                <div class="ys-mod">
+                    <h2 class="ys-quote">用途</h2>
+                    <pre rel="js">
+                        <code class="language-js">
+    // 根据数字的正负来判断是使用 Math.ceil 或 Math.floor
+
+    Number.method('inter', function () {
+        return Math[this < 0 ? 'ceil' : 'floor'](this);
+    });
+
+    // 移除字符串首尾空白的方法
+
+    String.method('trim', function () {
+        return this.replace(/^\s+|\s+$/g, '');
+    });
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../Plugins/prism/prism.js"></script>
+</body>
+
+</html>
